@@ -4,6 +4,17 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
 function Footer() {
+    const newEmail = document.getElementById('email-subscribe')
+
+    function handleNewEmail(e){
+        console.log(e)
+        e.preventDefault()
+    }
+
+    // newEmail.addEventListener('submit', handleNewEmail)
+
+
+
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
@@ -14,7 +25,7 @@ function Footer() {
           You can unsubscribe at any time.
         </p>
         <div className='input-areas'>
-          <form>
+          <form id='email-subcribe'>
             <input
               className='footer-input'
               name='email'
