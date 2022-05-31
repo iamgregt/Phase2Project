@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../App.css'
 
 export default function SignUp() {
     
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
 
     function handleSubmit(e){
         e.preventDefault()
