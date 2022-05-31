@@ -32,13 +32,13 @@ export default function SignUp() {
             <div className='sign-up-form'>
         <form onSubmit={handleSubmit}>
             <label>First Name
-            <input type='text' placeholder='Your First Name'/>
+            <input type='text' placeholder='Your First Name' required/>
             </label>
             <label>Email
-            <input type='text' placeholder='Your Last Name'/>
+            <input type='text' placeholder='Your Last Name' required/>
             </label>
             <label>Email
-            <input type='email' placeholder='Enter Your Email Here'/>
+            <input type='email' placeholder='Enter Your Email Here' required/>
             <input type='submit' value='Submit'/>
             </label>
         </form>
