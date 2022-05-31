@@ -35,13 +35,16 @@ export default function SignUp() {
             <div className='sign-up-form'>
         <form onSubmit={handleSubmit}>
             <label>First Name
-            <input type='text' placeholder='Your First Name' required/>
+            <input type='text' placeholder='Your First Name' required value={firstName}
+            onChange={e => setFirstName(e.target.value)}/>
+            </label>
+            <label>Last Name
+            <input type='text' placeholder='Your Last Name' required value={lastName}
+            onChange={e => setLastName(e.target.value)}/>
             </label>
             <label>Email
-            <input type='text' placeholder='Your Last Name' required/>
-            </label>
-            <label>Email
-            <input type='email' placeholder='Enter Your Email Here' required/>
+            <input type='email' placeholder='Enter Your Email Here' required value={email}
+            onChange={e => setEmail(e.target.value)}/>
             <input type='submit' value='Submit'/>
             </label>
         </form>
