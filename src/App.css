@@ -9,7 +9,6 @@
 .services,
 .products,
 .sign-up {
-  display: flex;
   height: 90vh;
   align-items: center;
   justify-content: center;
@@ -41,4 +40,8 @@
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
+}
+
+.sign-up-form {
+  display: block;
 }
