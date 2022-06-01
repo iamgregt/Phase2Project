@@ -1,11 +1,31 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
 
 function HeroSection() {
+  const [photo, setPhoto] = useState(false)
+
+
+  const showPhoto = () => {
+    if(window.innerWidth <= 599) {
+      setPhoto(true)
+    } else {
+      setPhoto(false)
+    }
+  }
+
+  useEffect(() => {
+    showPhoto()
+  }, [])
+
+  window.addEventListener('resize', showPhoto)
+
+
+
+
   return (
-    <div className='hero-container'>
+    <div className={photo ? 'hero-container-mobile' : 'hero-container' }>
       <video src='/videos/pressureWash.mp4' autoPlay loop muted />
       <h1>WE CLEAN BETTER UNDER PRESSURE</h1>
       <p>What are you waiting for?</p>
