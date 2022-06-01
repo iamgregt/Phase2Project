@@ -35,6 +35,7 @@ video {
     font-size: 6vw;
     margin-top: -100px;
     white-space: nowrap;
+    font-family: 'Bebas Neue', cursive;
   }
   
   .hero-container > p {
