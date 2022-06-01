@@ -6,7 +6,7 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <div className='hero-container'>
-      <video src='/videos/pressureWash.mov' autoPlay loop muted />
+      <video src='/videos/pressureWash.mp4' autoPlay loop muted />
       <h1>WE CLEAN BETTER UNDER PRESSURE</h1>
       <p>What are you waiting for?</p>
       <div className='hero-btns'>
@@ -23,7 +23,7 @@ function HeroSection() {
           buttonSize='btn--large'
           onClick={console.log('hey')}
         >
-          WATCH TRAILER <i className='far fa-play-circle' />
+          WATCH DEMO <i className='far fa-play-circle' />
         </Button>
       </div>
     </div>
