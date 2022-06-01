@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import '../../App.css'
+import { UserEmail } from '../../context/userEmail'
 
 export default function SignUp() {
     
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
-    const [email, setEmail] = useState('')
+    const [email, setEmail] = useContext(UserEmail)
 
     function handleSubmit(e){
         e.preventDefault()

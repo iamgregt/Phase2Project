@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Footer.css';
 import { Button } from './Button';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { UserEmail } from '../context/userEmail';
 
 function Footer() {
+
+const [email, setEmail] = useContext(UserEmail)
+const history = useHistory()
+
+function handleSubmit(e) {
+    e.preventDefault()
+    console.log(email)
+
+    history.push('/sign-up')
+}
 
     
   return (
@@ -22,8 +33,10 @@ function Footer() {
               name='email'
               type='email'
               placeholder='Your Email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value) }
             />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
+            <Button buttonStyle='btn--outline' onClick={handleSubmit}>Subscribe</Button>
           </form>
         </div>
       </section>
