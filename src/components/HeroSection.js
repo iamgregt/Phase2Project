@@ -28,7 +28,7 @@ function HeroSection() {
     <div className={photo ? 'hero-container-mobile' : 'hero-container' }>
       <video src='/videos/pressureWash.mp4' autoPlay loop muted />
       <h1>WE CLEAN BETTER UNDER PRESSURE</h1>
-      <p>What are you waiting for?</p>
+      {/* <p>What are you waiting for?</p> */}
       <div className='hero-btns'>
         <Button
           className='btns'
