@@ -36,7 +36,9 @@ video {
     margin-top: -100px;
     white-space: nowrap;
     font-family: 'Bebas Neue', cursive;
-    background-color: rgba(0, 0, 0, 0.634);
+    background-color: rgba(0, 0, 0, 0.407);
+    border-style: inset;
+    border-top: 40%;
   }
   
   .hero-container > p {
