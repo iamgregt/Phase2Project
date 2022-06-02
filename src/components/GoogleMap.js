@@ -6,28 +6,41 @@ import {
     HStack,
     IconButton,
     Input,
+    SkeletonText,
     Text,
   } from '@chakra-ui/react'
   import { FaLocationArrow, FaTimes } from 'react-icons/fa'
+  import {useJsApiLoader, GoogleMap as GMAP} from "@react-google-maps/api"
+
+  const center = { lat: 35.133917650729394, lng: -89.981809341931 }
 
   function GoogleMap() {
+    const {isLoaded} = useJsApiLoader({
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    })
+
+    if (!isLoaded) {
+        return <h1>Loading</h1>
+    }
+
     return (
       <Flex
         position='relative'
         flexDirection='column'
         alignItems='center'
-        bgColor='blue.200'
-        bgImage='https://images.unsplash.com/photo-1647117181799-0ac3e50a548a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'
-        bgPos='bottom'
         h='100vh'
         w='100vw'
       >
-        <Box position='absolute' left={0} top={0} h='100%' w='100%'></Box>
-  
+        <Box position='absolute' left={0} top={0} h='100%' w='100%'>
+        <GMAP center={center} zoom={11} mapContainerStyle={{width: '100%', height: '100%'}}>
+
+</GMAP>
+        </Box>
+
         <Box
           p={4}
           borderRadius='lg'
-          mt={4}
+          m={4}
           bgColor='white'
           shadow='base'
           minW='container.md'
