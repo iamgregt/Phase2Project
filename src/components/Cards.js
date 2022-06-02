@@ -22,26 +22,29 @@ function Cards() {
               path='/services'
             />
           </ul>
+      <h1>What We Offer</h1>
+        <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem
-              src='images/img-3.jpg'
+              src='images/driveway.jpeg'
               text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-              label='Mystery'
+              label='Driveway Cleaning'
               path='/services'
             />
             <CardItem
-              src='images/img-4.jpg'
+              src='images/roof.jpeg'
               text='Experience Football on Top of the Himilayan Mountains'
-              label='Adventure'
+              label='Roof Cleaning'
               path='/products'
             />
             <CardItem
-              src='images/img-8.jpg'
+              src='images/patio.jpeg'
               text='Ride through the Sahara Desert on a guided camel tour'
-              label='Adrenaline'
+              label='Patio Cleaning'
               path='/sign-up'
             />
           </ul>
+            </div>
         </div>
       </div>
     </div>
