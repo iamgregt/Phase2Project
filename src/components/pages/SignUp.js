@@ -11,7 +11,7 @@ export default function SignUp() {
     function handleSubmit(e){
         e.preventDefault()
         console.log(e.target[0].value)
-        fetch('http://localhost:3000/comments', {
+        fetch('http://localhost:3000/newusers', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
